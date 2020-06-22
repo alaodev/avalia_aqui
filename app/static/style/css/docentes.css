@@ -1,0 +1,118 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to right, #EE014F , #FD724F);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+tr:hover {
+  background-color: #8D8D8D;
+  cursor: pointer;
+}
+
+.th-tabela {
+  border-top: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.td-tabela {
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  color: gray;
+}
+
+.td-tabela:hover {
+  background: rgba(255,255,255,.4);
+  color:#FFFFFF;
+}
+.form-control,
+.form-control:active,
+.form-control:focus,
+.form-control:focus:active {
+  box-shadow: 0px 0px rgba(0,0,0,0);
+  background-color: #FFFFFF!important;
+  border-radius: 5px;
+  border-color: #FFFFFF;
+}
+
+.table {
+  background-color: #000000;
+}
+
+.alert-danger {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+
+.alert-success {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+.inv {
+  display: none;
+}
+
+#docente {
+  cursor: pointer;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+}
+
+.card-ouro {
+  background: #FFC107;
+  color: #FFFFFF;
+  animation: pulse 0.7s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.card-prata {
+  border: 2px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.card-bronze {
+  border: 2px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.medalha-prata {
+  color: #E6E5E3;
+}
+
+.medalha-bronze {
+  color: #E5A17A;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

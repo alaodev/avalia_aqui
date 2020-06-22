@@ -1,0 +1,128 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<form class="form-signin text-white text-center" action="{{ url_for('avaliar', id_usuario=id_usuario, id_professor=professor[0]) }}" method="post">
+    <h2>Avalie</h2>
+    <h1 class="h1 titulo_professor">{{ professor[1] }}</h1>
+    <table class="table text-white">
+        <thead>
+           <th class="text-left">Critério</th>
+           <th>Avaliação</th>
+           <th>Média por Critério</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="align-middle text-left">Domínio</td>
+                <td class="align-middle avaliacao">
+                    <i class="far fa-star p-3 text-warning" id="nota11"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota12"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota13"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota14"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota15"></i>
+                </td>
+                <td class="align-middle">
+                    {% if media_avaliacoes[0] is none %}
+                        <sub>Não Avaliado</sub>
+                    {% else %}
+                        <sub>{{ media_avaliacoes[0] }}</sub>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle text-left">Pontualidade</td>
+                <td class="align-middle avaliacao">
+                    <i class="far fa-star p-3 text-warning" id="nota21"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota22"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota23"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota24"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota25"></i>
+                </td>
+                <td class="align-middle">
+                    {% if media_avaliacoes[1] is none %}
+                        <sub>Não Avaliado</sub>
+                    {% else %}
+                        <sub>{{ media_avaliacoes[1] }}</sub>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle text-left">Didática</td>
+                <td class="align-middle avaliacao">
+                    <i class="far fa-star p-3 text-warning" id="nota31"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota32"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota33"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota34"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota35"></i>
+                </td>
+                <td class="align-middle">
+                    {% if media_avaliacoes[2] is none %}
+                        <sub>Não Avaliado</sub>
+                    {% else %}
+                        <sub>{{ media_avaliacoes[2] }}</sub>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle text-left">Multimídia</td>
+                <td class="align-middle avaliacao">
+                    <i class="far fa-star p-3 text-warning" id="nota41"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota42"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota43"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota44"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota45"></i>
+                </td>
+                <td class="align-middle">
+                    {% if media_avaliacoes[3] is none %}
+                        <sub>Não Avaliado</sub>
+                    {% else %}
+                        <sub>{{ media_avaliacoes[3] }}</sub>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle text-left">Avaliação</td>
+                <td class="align-middle avaliacao">
+                    <i class="far fa-star p-3 text-warning" id="nota51"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota52"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota53"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota54"></i>
+                    <i class="far fa-star p-3 text-warning" id="nota55"></i>
+                </td>
+                <td class="align-middle">
+                    {% if media_avaliacoes[4] is none %}
+                        <sub>Não Avaliado</sub>
+                    {% else %}
+                        <sub>{{ media_avaliacoes[4] }}</sub>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input class="nota" id="nota1" name="nota1" type="text">
+    <input class="nota" id="nota2" name="nota2" type="text">
+    <input class="nota" id="nota3" name="nota3" type="text">
+    <input class="nota" id="nota4" name="nota4" type="text">
+    <input class="nota" id="nota5" name="nota5" type="text">
+    <div class="row my-2">
+        <div class="col-md-12">
+            <sub>última Avaliação</sub>
+        </div>
+    </div>
+    <table class="table text-white">
+        <thead>
+            <th><sub>Domínio</sub></th>
+            <th><sub>Pontualidade</sub></th>
+            <th><sub>Didática</sub></th>
+            <th><sub>Multimídia</sub></th>
+            <th><sub>Avaliação</sub></th>
+        </thead>
+        <tbody>
+            <td><sub>{{ ultima_avaliacao[0] }}</sub></td>
+            <td><sub>{{ ultima_avaliacao[1] }}</sub></td>
+            <td><sub>{{ ultima_avaliacao[2] }}</sub></td>
+            <td><sub>{{ ultima_avaliacao[3] }}</sub></td>
+            <td><sub>{{ ultima_avaliacao[4] }}</sub></td>
+        </tbody>
+    </table>
+    <button class="btn btn-lg btn-block btn-primary mt-4" type="submit">FINALIZAR AVALIAÇÃO</button>
+</form>
+{% endblock %}
